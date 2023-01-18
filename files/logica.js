@@ -98,7 +98,7 @@ wordRepeats(
 );
 
 /*7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.*/
-
+/*Utiliza el metodo reverse() y modifica la cadena con toLowerCase()*/
 const palindromeWord = (word = "") => {
   const backwardsWord = word.split("").reduce((acc, value) => value + acc),
     exp = new RegExp(backwardsWord);
@@ -111,7 +111,7 @@ const palindromeWord = (word = "") => {
 palindromeWord("amor a roma");
 
 /*8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5. */
-
+/*Crea un Branch con modificación de este y otros puntos, en este caso utiliza el metodo replace(cadenaDeTexto.replace(new Reg(b), ""))*/
 const fillter = (arr, b) => {
   const exp = new RegExp(b, "g"),
     [res] = [...arr.match(exp)];
