@@ -1,17 +1,26 @@
+console.warn(
+  `//--------------------------/(1)/-----------------------------//`
+);
+
 /*1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.*/
 
 const characteresCount = (element) => {
   //fillter Objects
   Object.entries(element).map((key) => {
     const [Key_, value] = [...key];
+
     Number(Key_) !== parseInt(Key_)
-      ? console.log(`your text chain has ${Key_.length + value.length}`)
-      : console.log(element.length);
+      ? console.log(
+          `your text chain has: "${Key_.length + value.length}" characters`
+        )
+      : console.log(`the sentence has: "${element.length}" characters`);
   });
 };
 
-characteresCount(
-  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit incidunt consectetur fugit tenetur aliquam odio odit consequatur, corporis deleniti nisi quo ullam. Cum, in dicta molestiae nemo illo porro aliquid optio laudantium incidunt provident error quos, dolores a quibusdam sed eaque explicabo blanditiis laboriosam, sint hic id ipsa possimus ipsam."
+characteresCount({ make: "Ford", model: "Mustang", year: "1969" });
+
+console.warn(
+  `//--------------------------/(2)/-----------------------------//`
 );
 
 //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
