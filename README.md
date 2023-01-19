@@ -39,5 +39,3 @@ your text chain has: "8" characters_/
 uno por cada propiedad y valor: \*your text chain has: "8" characters
 
 RECUERDA SUBIR EL SCROLL DE LA CONSOLA HASTA ARRIBA PARA VER ESTE RESULTADO.
-
-Estas en la rama(branch) testfixes. repara lo que debes de reparar o simplemente prueba codigo.
