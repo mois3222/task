@@ -98,14 +98,20 @@ wordRepeats(
 );
 
 /*7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.*/
-/*Utiliza el metodo reverse() y modifica la cadena con toLowerCase()*/
+
 const palindromeWord = (word = "") => {
-  const backwardsWord = word.split("").reduce((acc, value) => value + acc),
+  word = word.toLocaleLowerCase();
+
+  const backwardsWord = word.split("").reverse().join(""),
     exp = new RegExp(backwardsWord);
 
   exp.test(word) && word !== ""
     ? console.log(`your palidrome is "${backwardsWord}"`)
     : console.warn(`the word "${word} its'nt a palidrome"`);
+
+  word === ""
+    ? console.warn(`you not insert any please add a palidrome word`)
+    : null;
 };
 
 palindromeWord("amor a roma");
