@@ -98,35 +98,31 @@ wordRepeats(
 );
 
 /*7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.*/
-/*Utiliza el metodo reverse() y modifica la cadena con toLowerCase()*/
+
 const palindromeWord = (word = "") => {
-  const backwardsWord = word.split("").reduce((acc, value) => value + acc),
+  word = word.toLocaleLowerCase();
+
+  const backwardsWord = word.split("").reverse().join(""),
     exp = new RegExp(backwardsWord);
 
   exp.test(word) && word !== ""
     ? console.log(`your palidrome is "${backwardsWord}"`)
     : console.warn(`the word "${word} its'nt a palidrome"`);
+
+  word === ""
+    ? console.warn(`you not insert any please add a palidrome word`)
+    : null;
 };
 
 palindromeWord("amor a roma");
 
 /*8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5. */
-/*Crea un Branch con modificación de este y otros puntos, en este caso utiliza el metodo replace(cadenaDeTexto.replace(new Reg(b), ""))*/
-const fillter = (arr, b) => {
+
+const fillter = (chain, b) => {
   const exp = new RegExp(b, "g"),
-    [res] = [...arr.match(exp)];
+    res = chain.replace(exp, "");
 
-  arr.split(",").forEach((element) => {
-    if (element.split("", res.length) !== "") {
-      const back = element
-        .trim()
-        .split("")
-        .splice(res.length, res.length + Infinity)
-        .reduce((acc, value) => acc + value, "");
-
-      console.log(back);
-    }
-  });
+  console.log(res);
 };
 
 fillter("Moises1, Moises2, Moises3, Moises4, Moises5, ", "Moises");
