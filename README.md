@@ -6,7 +6,7 @@ Explicaciones.
 
 (1). Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
 
-El problema consiste en que debo construir una función que cuente el número de caracteres de una cadena de texto, sin embargo hay la posibilidad que también se necesite contar el número de caracteres de un objeto por ello, cree la siguiente función que tolera tango cadenas de textos (String) como con objetos.
+About the problem is: I should make a function that would count the character numbers chain of a text although, there is the possibility too will be needed to count the character numbers of an object then, I created the next function that works with "string" as with "Objects".
 
 o characteresCount: Nombre de la función.
 o element: El elemento es un parámetro que recibe tanto objetos como string.
