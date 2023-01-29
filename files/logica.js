@@ -130,3 +130,59 @@ fillter("Moises1, Moises2, Moises3, Moises4, Moises5, ", "Moises");
 /*9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.*/
+
+/*9) Programa una función que obtenga un numero aleatorio entre 501 y 600. */
+
+const random = (max, min) => {
+  return Math.floor(Math.random() * (max - min) + min);
+};
+
+console.log(random(600, 501));
+
+/*10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true. */
+
+const Igualar = (n = "") => {
+  n = `${n}`;
+  let origin = n;
+  n = n.split("").reverse().join("");
+
+  origin === n
+    ? console.log(`The number that you added it's Capicúa "${n}":`, origin == n)
+    : console.log(
+        `The number that you added its'nt some that is to say, ${origin} !== ${n}:`,
+        origin == n
+      );
+};
+
+Igualar(2001);
+
+/*11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120. */
+
+const calNFactorial = (n = "") => {
+  let count = 0,
+    array = [];
+
+  n = parseInt(n);
+
+  if (n !== "") {
+    while (count <= n) {
+      count++;
+
+      count > n ? null : array.push(count);
+    }
+
+    try {
+      let res = array.reduce((acc, value) => {
+        return acc * value;
+      });
+
+      console.log(`Your Factorial Number is: "${res}"`);
+    } catch (error) {
+      console.warn(`Please add some value number = undefined`);
+
+      console.log(error);
+    }
+  }
+};
+
+calNFactorial("7");
