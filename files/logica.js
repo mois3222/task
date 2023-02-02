@@ -1,9 +1,14 @@
+/* Separator... :*/
+
+const spt = (n) => {
 console.warn(
-  `//--------------------------/(1)/-----------------------------//`
+  `//--------------------------/(${})/-----------------------------//`
 );
+}  
+
+spt(1);
 
 /*1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.*/
-
 const characteresCount = (element) => {
   //fillter Objects
   Object.entries(element).map((key) => {
@@ -19,10 +24,7 @@ const characteresCount = (element) => {
 
 characteresCount({ make: "Ford", model: "Mustang", year: "1969" });
 
-console.warn(
-  `//--------------------------/(2)/-----------------------------//`
-);
-
+spt(2);
 //2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
 
 const join = (value = "", number = undefined) => {
@@ -38,6 +40,7 @@ join(
   5
 );
 
+spt(3);
 //3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
 
 //acordate que debes de crear una branch para solucionar este codigo o mas bien mejorarlo..
@@ -48,6 +51,7 @@ const glassString = LoremString.split(" ", 4);
 
 console.log(glassString);
 
+spt(4);
 //4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
 
 const repeat = (justWords, amount) => {
@@ -60,6 +64,7 @@ const repeat = (justWords, amount) => {
 
 repeat("Hola mundo", 3);
 
+spt(5);
 /**5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH". */
 
 const toUntidy = (untidyWord = "") => {
@@ -72,6 +77,7 @@ toUntidy(
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 );
 
+spt(6);
 /*6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2. */
 
 const wordRepeats = (value = "", repeat = undefined) => {
@@ -97,6 +103,7 @@ wordRepeats(
   "dolore"
 );
 
+spt(7);
 /*7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.*/
 
 const palindromeWord = (word = "") => {
@@ -116,6 +123,7 @@ const palindromeWord = (word = "") => {
 
 palindromeWord("amor a roma");
 
+spt(8);
 /*8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5. */
 
 const fillter = (chain, b) => {
@@ -131,6 +139,7 @@ fillter("Moises1, Moises2, Moises3, Moises4, Moises5, ", "Moises");
 10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
 11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.*/
 
+spt(9);
 /*9) Programa una función que obtenga un numero aleatorio entre 501 y 600. */
 
 const random = (max, min) => {
@@ -139,6 +148,7 @@ const random = (max, min) => {
 
 console.log(random(600, 501));
 
+spt(10);
 /*10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true. */
 
 const Igualar = (n = "") => {
@@ -156,6 +166,7 @@ const Igualar = (n = "") => {
 
 Igualar(2001);
 
+spt(11);
 /*11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120. */
 
 const calNFactorial = (n = "") => {
