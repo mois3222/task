@@ -1,10 +1,10 @@
 /* Separator... :*/
 
 const spt = (n) => {
-console.warn(
-  `//--------------------------/(${n})/-----------------------------//`
-);
-}  
+  console.warn(
+    `//--------------------------/(${n})/-----------------------------//`
+  );
+};
 
 spt(1);
 
@@ -125,7 +125,6 @@ palindromeWord("amor a roma");
 
 spt(8);
 /*8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5. */
-
 const fillter = (chain, b) => {
   const exp = new RegExp(b, "g"),
     res = chain.replace(exp, "");
@@ -141,7 +140,6 @@ fillter("Moises1, Moises2, Moises3, Moises4, Moises5, ", "Moises");
 
 spt(9);
 /*9) Programa una función que obtenga un numero aleatorio entre 501 y 600. */
-
 const random = (max, min) => {
   return Math.floor(Math.random() * (max - min) + min);
 };
@@ -150,7 +148,6 @@ console.log(random(600, 501));
 
 spt(10);
 /*10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true. */
-
 const Igualar = (n = "") => {
   n = `${n}`;
   let origin = n;
@@ -168,7 +165,6 @@ Igualar(2001);
 
 spt(11);
 /*11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120. */
-
 const calNFactorial = (n = "") => {
   let count = 0,
     array = [];
@@ -197,3 +193,83 @@ const calNFactorial = (n = "") => {
 };
 
 calNFactorial("7");
+
+spt(12);
+//12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+const nPrimo = (n = 0) => {
+  if (n === 0 || n === 1)
+    return console.warn(`Please insert a number different to "0" and "1"`);
+
+  if (typeof n === "string" && parseInt(n) !== Number(n))
+    return console.warn(
+      `You inserted a String that don't care, however the string is a letter or a setence: "${n}"`
+    );
+
+  n = parseInt(n);
+
+  const arr = [],
+    exp = new RegExp(/^([0-9])*$/),
+    otherArr = [];
+
+  let num = n;
+
+  while (num > 1) {
+    num = num - 1;
+
+    arr.push(num);
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    let result = n / arr[i];
+
+    exp.test(result) ? otherArr.push(result) : null;
+  }
+
+  otherArr.length > 1
+    ? console.log(`You number: "${n}" isn't Primo(${false})`)
+    : console.log(`You number: "${n}" is Primo(${true})`);
+};
+
+nPrimo("89");
+
+spt(13);
+//13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+const uneven = (num) => {
+  if (typeof num === "string" && parseInt(num) !== Number(num))
+    return console.warn(
+      `You inserted a String that don't care, however the string is a letter or a setence: "${num}"`
+    );
+  num = parseInt(num);
+  const exp = new RegExp(/^([0-9])*$/),
+    nDiv = num / 2;
+
+  exp.test(nDiv) ? null : console.log(`You number: "${num}" is uneven.`);
+};
+
+uneven("5");
+
+spt(14);
+//14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+const CelsiusAFahrenheit = (num = 0, sim = "") => {
+  if (typeof num === "string" && parseInt(num) !== Number(num))
+    return console.warn(
+      `You inserted a String that don't care, however the string is a letter or a setence: "${num}"`
+    );
+
+  if (sim === "") return console.warn(`Please insert the second parameter!`);
+
+  if (typeof sim === "number")
+    return console.warn(
+      `You inserted a number the function not accept that characteres: "${num}"`
+    );
+
+  if (parseInt(sim) === Number(sim))
+    return console.warn(`You insert a Number in the parameter two "${sim}"`);
+
+  num = parseInt(num);
+
+  if (sim === "C") return console.log(`${num}°C = "${num * (9 / 5) + 32}°F"`);
+  if (sim === "F") return console.log(`${num}°F = "${(num - 32) * (5 / 9)}°C"`);
+};
+
+CelsiusAFahrenheit(0, "C");
